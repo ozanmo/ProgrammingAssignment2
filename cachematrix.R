@@ -2,7 +2,6 @@
 ## cacheSolve computes or (if known) retrieves the inverse 
 
 
-
 ## makeCacheMatrix creates a special matrix object that can cache its inverse.
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -20,8 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## cacheSolve computes the inverse of the matrix returned by makeCacheMatrix. 
-## If the inverse is known (and the matrix has not changed),
-## it retrieves the inverse from the cache.
+## If the inverse is known (and the matrix has not changed), it retrieves the inverse from the cache.
 cacheSolve <- function(x, ...) {
   m <- x$getinverse()
   if(!is.null(m)) {
